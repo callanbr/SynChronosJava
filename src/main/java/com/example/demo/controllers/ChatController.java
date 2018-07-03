@@ -33,16 +33,16 @@ public class ChatController {
 		chatRepository.save(chat);
 	}
 	
-	@PostMapping("/multiple")
-	public void createChat(@RequestBody List<Chat> chat) {
-		chatRepository.saveAll(chat);
-	}
-	
-	@DeleteMapping("/{id}")
-	public void deleteChat(@PathVariable("id") int id)	{
-		Chat chatDelete = chatRepository.findById(id).orElse(null);
-		chatRepository.delete(chatDelete);
-	}
+//	@PostMapping("/multiple")
+//	public void createChat(@RequestBody List<Chat> chat) {
+//		chatRepository.saveAll(chat);
+//	}
+//	
+//	@DeleteMapping("/{id}")
+//	public void deleteChat(@PathVariable("id") int id)	{
+//		Chat chatDelete = chatRepository.findById(id).orElse(null);
+//		chatRepository.delete(chatDelete);
+//	}
 
 	
 
