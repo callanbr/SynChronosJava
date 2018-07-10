@@ -30,7 +30,7 @@ public class ProfileController {
 	}
 	
 	@PostMapping()
-	public void createChat(@RequestBody Profile profile) {
+	public void createProfile(@RequestBody Profile profile) {
 		profileRepository.save(profile);
 	}
 	
