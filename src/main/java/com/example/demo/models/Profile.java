@@ -16,7 +16,8 @@ public class Profile {
 	private String lastName;
 	private String email;
 	private String password;
-	private String username;
+	public static String username;
+	
 	public String getFirstName() {
 		return firstName;
 	}
