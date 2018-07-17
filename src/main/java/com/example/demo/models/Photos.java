@@ -1,7 +1,10 @@
 package com.example.demo.models;
 import java.util.ArrayList;
 
- 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
@@ -29,7 +32,7 @@ public class Photos {
 //	@Id
 //	@GeneratedValue(strategy=GenerationType.AUTO)
 //	private Integer id;
-//	
+	
 
 	private final Path rootLocation = Paths.get("upload-dir");
  
