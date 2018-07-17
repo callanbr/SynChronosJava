@@ -16,8 +16,8 @@ public class Chat  {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
    
-	private Integer id;
-    public String username;
+	private Integer ClientId;
+    public static String name;
     private String message;
     public Timestamp timestamp;
     
@@ -39,17 +39,17 @@ public class Chat  {
 	}
 	public void setTimestamp(Timestamp timestamp) {
     }
-	public Integer getId() {
-        return id;
+	public Integer getClientId() {
+        return ClientId;
     }
-    public void setId(Integer id) {
-        this.id = id;
+    public void setClientId(Integer id) {
+        this.ClientId = id;
     }
-    public String getUsername() {
-        return username = Profile.username;
+    public String getName() {
+        return name = Profile.name;
     }
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        Chat.name = name;
     }
     public String getMessage() {
         return message;

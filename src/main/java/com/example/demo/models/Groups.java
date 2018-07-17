@@ -17,19 +17,23 @@ public class Groups {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private String groupname;
-    
-    public static String username = Profile.username;
-    ArrayList<String> group = new ArrayList<String>() {{
-    group.add(Profile.username);
-    for (String user : group)
-        System.out.println(group.size());
-    }};
+   
+    public static String name = Profile.name;
+    ArrayList<String> group = new ArrayList<String>();
+//    {
+//    group.add(Profile.username);
+//    for (String user : group)
+//        System.out.println(group.size());
+//    };
         
     
 //    public String username getusername() {
 //        
 //    }
 //    
+    public void addUser(String username) {
+    	this.group.add(username);
+    }
     public String getGroupname() {
         return groupname;
     }
