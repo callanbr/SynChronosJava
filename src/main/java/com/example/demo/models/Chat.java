@@ -8,14 +8,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import com.example.demo.models.Profile;
 
 @Entity
 @Table (name="chat")
-public class Chat {
+public class Chat  {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private String user;
+   
+	private Integer id;
+    public String username;
     private String message;
     public Timestamp timestamp;
     
@@ -43,11 +45,11 @@ public class Chat {
     public void setId(Integer id) {
         this.id = id;
     }
-    public String getUser() {
-        return user;
+    public String getUsername() {
+        return username = Profile.username;
     }
-    public void setUser(String user) {
-        this.user = user;
+    public void setUsername(String username) {
+        this.username = username;
     }
     public String getMessage() {
         return message;
@@ -55,5 +57,4 @@ public class Chat {
     public void setMessage(String message) {
         this.message = message;
     }
-
 }

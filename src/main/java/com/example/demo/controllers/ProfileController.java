@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.Chat;
+
 import com.example.demo.models.Profile;
 import com.example.demo.models.ProfileRepository;
 
