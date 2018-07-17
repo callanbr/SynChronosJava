@@ -36,14 +36,4 @@ public class CalendarController {
 		
 	}
 
-	@GetMapping()
-	public List<Calendar> getCalendar(){
-		return calendarRepository.findAll();
-	}
-
-	@PostMapping()
-	public void createCalendar(@RequestBody Calendar calendar) {
-		calendarRepository.save(calendar);
-	}
-
 }
