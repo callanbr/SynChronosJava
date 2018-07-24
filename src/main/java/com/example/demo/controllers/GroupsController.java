@@ -29,7 +29,5 @@ public class GroupsController {
 	@PostMapping()
 	public void createGroup(@RequestBody Groups groups) {
 		groupsRepository.save(groups);
-	}
+	}}
 
-
-}

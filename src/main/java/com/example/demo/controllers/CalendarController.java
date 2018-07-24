@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.models.Calendar;
 import com.example.demo.models.CalendarRepository;
+import com.example.demo.models.Chat;
 
 @RestController
 @RequestMapping("/calendar")
@@ -22,15 +23,17 @@ public class CalendarController {
 	@Autowired
 	CalendarRepository calendarRepository;
 	
-
 	@GetMapping()
 	public List<Calendar> getCalendar(){
 		return calendarRepository.findAll();
 	}
-
+	
+	
 	@PostMapping()
 	public void createCalendar(@RequestBody Calendar calendar) {
+		
 		calendarRepository.save(calendar);
+		
 	}
 
 }
