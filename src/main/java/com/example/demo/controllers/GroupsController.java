@@ -17,19 +17,17 @@ import com.example.demo.models.GroupsRepository;
 @RequestMapping("/groups")
 @CrossOrigin(origins="http://localhost:4200")
 public class GroupsController {
-    @Autowired
-    GroupsRepository groupsRepository;
-    
-    @GetMapping
-    public List<Groups> getGroups() {
-        return groupsRepository.findAll();
-        
-    }
-    
-    @PostMapping()
-    public void createGroup(@RequestBody Groups groups) {
-        groupsRepository.save(groups);
-    }
+	@Autowired
+	GroupsRepository groupsRepository;
+	
+	@GetMapping
+	public List<Groups> getGroups() {
+		return groupsRepository.findAll();
+		
+	}
+	
+	@PostMapping()
+	public void createGroup(@RequestBody Groups groups) {
+		groupsRepository.save(groups);
+	}}
 
-
-}
