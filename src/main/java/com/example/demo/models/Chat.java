@@ -46,7 +46,7 @@ public class Chat  {
         this.ClientId = id;
     }
     public String getName() {
-        return name = Profile.name;
+        return name;
     }
     public void setName(String name) {
         Chat.name = name;
