@@ -16,6 +16,7 @@ import io.jsonwebtoken.impl.crypto.MacProvider;
 import java.security.Key;
 
 import com.example.demo.models.Login;
+import com.example.demo.models.LoginResult;
 import com.example.demo.models.Profile;
 import com.example.demo.models.ProfileRepository;
 
@@ -29,7 +30,7 @@ public class LoginController {
 	
  @PostMapping()
 	@ResponseStatus(HttpStatus.OK)
-	public String createLogin(@RequestBody Login login) {
+	public LoginResult createLogin(@RequestBody Login login) {
 		Key key = MacProvider.generateKey();
 //		Optional<profile> is my type like int, string, etc. P is my Name. The rest is my location
 		Optional<Profile> p = profileRepository.findFirstByEmail(login.getEmail()); 
@@ -37,19 +38,32 @@ public class LoginController {
 		if (p.isPresent() == false) {
 			profile= new Profile(); 
 			profile.setEmail(login.getEmail());
+			profile.setImage(login.getImage());
+			profile.setName(login.getName());
 			profile= profileRepository.save(profile);
 			profileRepository.flush();
-		} else { profile= p.get();
-			
+		} else { 
+			profile= p.get();
 		}
 
 
 		String compactJws = Jwts.builder()
 		  .setSubject(profile.getId().toString())
 		  .claim("email",  login.getEmail())
+		  .claim("Image", login.getImage())
+		  .claim("name", login.getName())
 		  .signWith(SignatureAlgorithm.HS512, key)
 		  .compact();
-    return compactJws;
+	 
+		 LoginResult result = new LoginResult();
+		 result.setEmail(login.getEmail());
+		 result.setImage(login.getImage());
+		 result.setId(profile.getId());
+		 result.setName(login.getName());
+		 result.setToken(compactJws);
+		 return result;
 	}
+ 
+ 
 
 }
