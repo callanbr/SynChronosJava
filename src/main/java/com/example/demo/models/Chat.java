@@ -20,9 +20,16 @@ public class Chat  {
     public static String name;
     private String message;
     public Timestamp timestamp;
+    public String photo;
     
     
-    public String getTimestamp() {
+    public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+	public String getTimestamp() {
 	     //Date object
 	     Date date= new Date();
 	     
