@@ -38,7 +38,9 @@ public class PhotosController {
 		String message = "";
 		try {
 			photos.store(file);
+			//V this is what I need? V
 			files.add(file.getOriginalFilename());
+			
  
 			message = "You successfully uploaded " + file.getOriginalFilename() + "!";
 			return ResponseEntity.status(HttpStatus.OK).body(message);
@@ -46,8 +48,9 @@ public class PhotosController {
 			message = "FAIL to upload " + file.getOriginalFilename() + "!";
 			return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 		}
+		
+		
 	}
-	
 	@GetMapping("/photos")
 	public ResponseEntity<List<String>> getListFiles(Model model) {
 		List<String> fileNames = files
@@ -58,7 +61,7 @@ public class PhotosController {
 		return ResponseEntity.ok().body(fileNames);
 	}
  
-	@GetMapping("/photos/{filename:.+}")
+	@GetMapping("/photos/{filename}")
 	@ResponseBody
 	public ResponseEntity<Resource> getFile(@PathVariable String filename) {
 		Resource file = photos.loadFile(filename);

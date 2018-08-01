@@ -36,6 +36,12 @@ public class Groups {
 	public String getGroupname() {
 		return groupname;
 	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public void setGroupname(String groupname) {
 		this.groupname = groupname;
 	}

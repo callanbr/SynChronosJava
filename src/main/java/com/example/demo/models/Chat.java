@@ -20,9 +20,15 @@ public class Chat  {
     public static String name;
     private String message;
     public Timestamp timestamp;
+    public Integer groupId;
     
-    
-    public String getTimestamp() {
+    public Integer getGroupId() {
+		return groupId;
+	}
+	public void setGroupId(Integer groupId) {
+		this.groupId = groupId;
+	}
+	public String getTimestamp() {
 	     //Date object
 	     Date date= new Date();
 	     
