@@ -21,12 +21,22 @@ public class Chat  {
     private String message;
     public Timestamp timestamp;
     public Integer groupId;
+    public String photo;
     
     public Integer getGroupId() {
 		return groupId;
 	}
 	public void setGroupId(Integer groupId) {
 		this.groupId = groupId;
+	}
+    
+    
+    
+    public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 	public String getTimestamp() {
 	     //Date object
@@ -52,7 +62,7 @@ public class Chat  {
         this.ClientId = id;
     }
     public String getName() {
-        return name = Profile.name;
+        return name;
     }
     public void setName(String name) {
         Chat.name = name;

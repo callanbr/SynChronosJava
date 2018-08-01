@@ -20,19 +20,7 @@ public class Groups {
 	private Integer id;
 	private String groupname;
 	
-//	public static String username = Profile.username;
-//	ArrayList<String> group = new ArrayList<String>() {};
-//
-//	group.add(Profile.username);
-//	for (String user : group)
-//		System.out.println(group.size());
-//	}};
-		
 	
-//	public String username getusername() {
-//		
-//	}
-//	
 	public String getGroupname() {
 		return groupname;
 	}
