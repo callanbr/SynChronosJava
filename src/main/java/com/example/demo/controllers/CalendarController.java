@@ -35,14 +35,14 @@ public class CalendarController {
 	}
 	
 	@PostMapping()
-	public void createCalendar( @RequestBody Calendar calendar) {
+	public Calendar createCalendar( @RequestBody Calendar calendar) {
 		// should not have to do this but SQLITE is weird
 		Optional<Profile> p = profileRepository.findById(calendar.getProfile().getId());
 		if (p.isPresent()) {
 			calendar.setProfile(p.get());
 			calendarRepository.save(calendar);
 		}
-		
+		return calendar;
 	}
 
 }
