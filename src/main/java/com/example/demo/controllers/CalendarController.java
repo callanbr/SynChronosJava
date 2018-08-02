@@ -29,7 +29,7 @@ public class CalendarController {
 	@Autowired
 	ProfileRepository profileRepository;
 	
-	@GetMapping("{id}")
+	@GetMapping("/{id}")
 	public List<Calendar> getCalendar(@PathVariable Integer id){
 		return calendarRepository.findByProfileId(id);
 	}
