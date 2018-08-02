@@ -32,7 +32,7 @@ public class Settings {
 		this.isLightMode = isLightMode;
 	}
     public String getName() {
-        return name = Profile.name;
+        return name;
     }
 //    public Integer getUserId() {
 //        return userId = Profile.id;
