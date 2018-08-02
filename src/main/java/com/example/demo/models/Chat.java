@@ -20,7 +20,16 @@ public class Chat  {
     public static String name;
     private String message;
     public Timestamp timestamp;
+    public Integer groupId;
     public String photo;
+    
+    public Integer getGroupId() {
+		return groupId;
+	}
+	public void setGroupId(Integer groupId) {
+		this.groupId = groupId;
+	}
+    
     
     
     public String getPhoto() {
