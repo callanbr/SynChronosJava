@@ -1,10 +1,16 @@
 package com.example.demo.models;
 
  
+import java.util.List;
+
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +22,7 @@ public class Profile {
     private String email;
     private String name;
     private String Image; 
+ 
     // 
     public Integer getId() {
         return id;
@@ -41,5 +48,7 @@ public class Profile {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+    
 
 }

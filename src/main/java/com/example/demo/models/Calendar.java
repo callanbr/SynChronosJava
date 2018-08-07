@@ -1,9 +1,12 @@
 package com.example.demo.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -11,13 +14,15 @@ import javax.persistence.Table;
 public class Calendar {
 	
 	@Id
-
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private String start;
     private String end;
     private String title;
     private String color;
+    @ManyToOne
+    @JoinColumn(name="profileid")
+    private Profile profile;
     public Integer getId() {
         return id;
     }
@@ -48,4 +53,12 @@ public class Calendar {
     public void setColor(String color) {
         this.color = color;
     }
+ 
+  public Profile getProfile() {
+	  return profile;
+  }
+  public void setProfile(Profile profile) {
+	  this.profile = profile;
+  }
+  
 }

@@ -21,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.models.Chat;
 import com.example.demo.models.ChatRepository;
 import com.example.demo.models.Groups;
+import com.example.demo.models.Profile;
+
 
 @RestController
 @RequestMapping("/chat")
