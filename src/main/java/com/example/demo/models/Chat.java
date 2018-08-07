@@ -15,8 +15,7 @@ import com.example.demo.models.Profile;
 public class Chat  {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-   
-	private Integer ClientId;
+	private Integer clientId;
     public static String name;
     private String message;
     public Timestamp timestamp;
@@ -56,10 +55,10 @@ public class Chat  {
 	public void setTimestamp(Timestamp timestamp) {
     }
 	public Integer getClientId() {
-        return ClientId;
+        return clientId;
     }
     public void setClientId(Integer id) {
-        this.ClientId = id;
+        this.clientId = id;
     }
     public String getName() {
         return name;
