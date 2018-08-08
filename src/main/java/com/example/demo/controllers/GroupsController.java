@@ -15,7 +15,7 @@ import com.example.demo.models.GroupsRepository;
 
 @RestController
 @RequestMapping("/groups")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://synchronos.herokuapp.com")
 public class GroupsController {
 	@Autowired
 	GroupsRepository groupsRepository;

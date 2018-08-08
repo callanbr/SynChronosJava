@@ -22,7 +22,7 @@ import com.example.demo.models.ProfileRepository;
 @RestController
 @RequestMapping("/calendar")
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://synchronos.herokuapp.com")
 public class CalendarController {
 	
 	@Autowired

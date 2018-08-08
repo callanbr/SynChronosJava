@@ -26,7 +26,7 @@ import com.example.demo.models.Profile;
 
 @RestController
 @RequestMapping("/chat")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://synchronos.herokuapp.com")
 public class ChatController {
 	
 	@Autowired

@@ -25,7 +25,7 @@ import com.example.demo.models.Photos;
 
 
 @Controller()
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://synchronos.herokuapp.com")
 public class PhotosController {
 	
 	@Autowired

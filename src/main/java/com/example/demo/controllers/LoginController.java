@@ -20,7 +20,7 @@ import com.example.demo.models.LoginResult;
 import com.example.demo.models.Profile;
 import com.example.demo.models.ProfileRepository;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://synchronos.herokuapp.com")
 @RestController
 @RequestMapping("/login")
 public class LoginController {

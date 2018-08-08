@@ -15,7 +15,7 @@ import com.example.demo.models.SettingsRepository;
 
 @RestController
 @RequestMapping("/settings")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://synchronos.herokuapp.com")
 public class SettingsController {
 	
 	@Autowired
